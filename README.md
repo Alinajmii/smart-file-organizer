@@ -1,156 +1,182 @@
-باشه، این یکی واقعاً مثل README استاندارد و تمیزه، نه اون متن‌های “دفترچه یادداشت” که قبلاً دراومده بود.
-
-```markdown
+````markdown
 # Smart File Organizer
 
-A Python-based tool with both CLI and GUI that automatically organizes messy folders by file extension and filename patterns. It safely copies files into a structured directory without modifying originals.
+## Overview
+
+A Python-based file organization tool that automatically sorts and structures messy folders based on file extensions and filename patterns.
+
+The system scans a directory, analyzes file types, detects project or pattern names from filenames, and copies files into a clean structured folder hierarchy without modifying the original data.
 
 ---
 
-## 🚀 Features
+## Features
 
+### File Organization
 - Organizes files by extension (images, documents, code, etc.)
-- Groups files by project or filename patterns
-- GUI version built with Tkinter
-- CLI version for terminal usage
-- Copy-only mode (original files are never touched)
-- Handles duplicate filenames safely
-- Progress tracking and live logging
+- Separates files into dedicated category folders
+- Supports automatic grouping of similar filenames into subfolders
+
+### Project Detection
+- Detects project/client names from filenames using regex patterns
+- Supports custom project naming rules
+- Groups related files under the same project folder
+
+### Safe Processing
+- Copy-only mode (no deletion or movement of original files)
+- Duplicate filename handling
+- Safe directory creation
+
+### User Interface
+- CLI (Command Line Interface)
+- GUI version using Tkinter
+- Progress tracking and live logs
 
 ---
 
-## 📂 How It Works
+## Project Structure
 
-The tool scans a source folder and organizes files in 4 steps:
-
-1. Detect file type using extension  
-2. Extract project or pattern from filename  
-3. Create structured category folders  
-4. Copy files into the correct destination  
-
----
-
-## 📁 Output Structure Example
-
-```
-
-Organized/
-├── images/
-│   ├── project_a/
-│   │   ├── img1.png
-│   │   ├── img2.png
-│   ├── project_b/
-│       ├── image1.jpg
+```text
+smart-file-organizer/
 │
-├── excel_files/
-│   ├── reports/
-│   │   ├── sales.xlsx
-│   │   ├── finance.xlsx
+├── file_organizer.py
+├── file_organizer_gui.py
+├── README.md
+├── requirements.txt
 │
-├── pdf_files/
-│   ├── invoices/
-│       ├── inv1.pdf
-
+├── Organized/
+│   ├── images/
+│   │   ├── project_a/
+│   │   ├── project_b/
+│   │
+│   ├── excel_files/
+│   │   ├── reports/
+│   │
+│   ├── pdf_files/
+│   │   ├── invoices/
+│
+└── logs/
 ````
 
 ---
 
-## 🖥️ GUI Version
+## Technologies Used
 
-Run the graphical interface:
-
-```bash
-python file_organizer_gui.py
-````
-
-### GUI Features
-
-* Folder selection dialog
-* Start / Cancel buttons
-* Live progress bar
-* Real-time logs
+* Python
+* OS / Pathlib
+* Shutil
+* Regex
+* Tkinter (GUI)
 
 ---
 
-## ⚙️ CLI Version
+## Output Structure
 
-Run from terminal:
+Files are organized into the following hierarchy:
 
-```bash
-python file_organizer.py --source "path/to/source" --output "path/to/output"
+```text
+Output/
+│
+├── {category}/
+│   ├── {project_or_pattern}/
+│   │   ├── file.ext
 ```
 
-### Arguments
+Examples of categories:
 
-| Argument        | Description              |
-| --------------- | ------------------------ |
-| `-s, --source`  | Source folder (required) |
-| `-o, --output`  | Output folder            |
-| `-v, --verbose` | Show detailed logs       |
-| `--yes`         | Skip confirmation prompt |
-
----
-
-## 🧠 Core Logic
-
-* File scanning using recursive directory search
-* Extension-based categorization
-* Regex-based project name detection
-* Safe copy operation (no move/delete)
-* Duplicate filename resolution
+* images
+* excel_files
+* pdf_files
+* audio
+* video
+* code
 
 ---
 
-## 🔧 Requirements
+## Installation
 
-* Python 3.8+
-* No external dependencies
-* Tkinter (included in standard Python)
-
----
-
-## 📦 Installation
-
-Clone repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/smart-file-organizer.git
 cd smart-file-organizer
 ```
 
-Run GUI:
+No external dependencies required (standard Python only).
+
+---
+
+## Usage
+
+### CLI Version
+
+```bash
+python file_organizer.py --source "path/to/source" --output "path/to/output"
+```
+
+Options:
+
+* `-s, --source` → Source directory
+* `-o, --output` → Output directory
+* `-v, --verbose` → Detailed logs
+* `--yes` → Skip confirmation
+
+---
+
+### GUI Version
 
 ```bash
 python file_organizer_gui.py
 ```
 
-Or CLI:
+---
 
-```bash
-python file_organizer.py -s "Downloads" -o "Organized"
+## Workflow
+
+```text
+Source Folder
+     │
+     ▼
+File Scanning
+     │
+     ▼
+Extension Detection
+     │
+     ▼
+Project/Pattern Extraction
+     │
+     ▼
+Folder Structure Creation
+     │
+     ▼
+Safe File Copy
+     │
+     ▼
+Organized Output
 ```
 
 ---
 
-## 📌 Use Cases
-
-* Organizing Downloads folder
-* Cleaning messy project directories
-* Sorting images, PDFs, and documents
-* Creating structured backups
-
----
-
-## ⚠️ Safety
+## Safety
 
 * Original files are never modified
-* Only copies are created in the output folder
-* Safe for daily use on important data
+* Only copies are created in the output directory
+* Safe for production and personal use
 
 ---
 
-## 👤 Author
+## Future Improvements
+
+* File tagging system
+* Advanced AI-based filename classification
+* Configurable rules via JSON/YAML
+* Cloud storage integration
+* Duplicate content detection (hash-based)
+
+---
+
+## Author
 
 Ali Najmi
 
----
+```
+```
