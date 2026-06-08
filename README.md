@@ -140,7 +140,7 @@ python file_organizer_gui.py
 
 ## 🧑‍💻 Author
 
-Python-based automation tool for file system organization.
+Ali Najmi
 
 ---
 
