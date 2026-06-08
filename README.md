@@ -1,11 +1,11 @@
-```markdown
-# Smart File Organizer
+```text
+Smart File Organizer
 
 A Python-based desktop and CLI tool that automatically organizes files by extension and filename patterns. It includes a GUI (Tkinter) and a safe copy-only mode to ensure original files remain untouched.
 
----
+------------------------------------------------------------
 
-## 🚀 Features
+FEATURES
 
 - Organizes files by extension (images, documents, code, etc.)
 - Groups files by similar filename patterns
@@ -15,9 +15,9 @@ A Python-based desktop and CLI tool that automatically organizes files by extens
 - Handles duplicate filenames automatically
 - Progress tracking and live logging
 
----
+------------------------------------------------------------
 
-## 📂 How It Works
+HOW IT WORKS
 
 The tool scans a source directory and:
 
@@ -26,11 +26,9 @@ The tool scans a source directory and:
 3. Creates categorized folders  
 4. Copies files into structured directories  
 
----
+------------------------------------------------------------
 
-## 📁 Example Output Structure
-
-```
+EXAMPLE OUTPUT STRUCTURE
 
 Organized/
 ├── images/
@@ -49,104 +47,85 @@ Organized/
 │   ├── invoice/
 │   │   ├── invoice1.pdf
 
-````
+------------------------------------------------------------
 
----
-
-## 🖥️ GUI Version
-
-Run the graphical interface:
-
-```bash
-python file_organizer_gui.py
-````
-
-Features:
-
-* Folder selection
-* Progress bar
-* Live logs
-* Cancel button
-
----
-
-## ⚙️ CLI Version
-
-Run from terminal:
-
-```bash
-python file_organizer.py --source "path/to/source" --output "path/to/output"
-```
-
-### Options
-
-* `-s, --source` → Source folder (required)
-* `-o, --output` → Output folder
-* `-v, --verbose` → Detailed logs
-* `--yes` → Skip confirmation
-
----
-
-## 🧠 Logic Overview
-
-* Step 1: Group files by extension
-* Step 2: Extract base filename patterns
-* Step 3: Group similar names into folders
-* Step 4: Copy files safely (no modification of originals)
-
----
-
-## 🔧 Requirements
-
-* Python 3.8+
-* No external libraries required
-* Tkinter (included in standard Python installation)
-
----
-
-## 📦 Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/smart-file-organizer.git
-cd smart-file-organizer
-```
+GUI VERSION
 
 Run:
-
-```bash
 python file_organizer_gui.py
-```
 
----
+Features:
+- Folder selection
+- Progress bar
+- Live logs
+- Cancel button
 
-## 📌 Use Cases
+------------------------------------------------------------
 
-* Organizing Downloads folder
-* Cleaning messy project directories
-* Sorting images, documents, and code
-* Backup structuring
+CLI VERSION
 
----
+Run:
+python file_organizer.py --source "path/to/source" --output "path/to/output"
 
-## ⚠️ Important Notes
+Options:
+- -s, --source  : Source folder (required)
+- -o, --output  : Output folder
+- -v, --verbose : Detailed logs
+- --yes         : Skip confirmation
 
-* This tool does NOT delete or move original files
-* Only creates copies in the output directory
-* Safe for everyday file organization
+------------------------------------------------------------
 
----
+LOGIC OVERVIEW
 
-## 🧑‍💻 Author
+- Step 1: Group files by extension
+- Step 2: Extract base filename patterns
+- Step 3: Group similar names into folders
+- Step 4: Copy files safely (no modification of originals)
+
+------------------------------------------------------------
+
+REQUIREMENTS
+
+- Python 3.8+
+- No external libraries required
+- Tkinter (included in standard Python installation)
+
+------------------------------------------------------------
+
+INSTALLATION
+
+git clone https://github.com/your-username/smart-file-organizer.git
+cd smart-file-organizer
+
+Run:
+python file_organizer_gui.py
+
+------------------------------------------------------------
+
+USE CASES
+
+- Organizing Downloads folder
+- Cleaning messy project directories
+- Sorting images, documents, and code
+- Backup structuring
+
+------------------------------------------------------------
+
+IMPORTANT NOTES
+
+- This tool does NOT delete or move original files
+- Only creates copies in the output directory
+- Safe for everyday file organization
+
+------------------------------------------------------------
+
+AUTHOR
 
 Ali Najmi
 
----
+------------------------------------------------------------
 
-## 📄 License
+LICENSE
 
 MIT License
-
-```
 ```
